@@ -40,8 +40,11 @@
 					</ul>
 					
 					<h:form class="form-inline">
-			            <p:inputText class="form-control" placeholder="O que procura?"/>
-			            <p:commandButton class="form-control btn btn-sm btn-amber" value="Buscar"/>
+			            <p:inputText class="form-control" placeholder="O que procura?" 
+			            	value="#{midiaController.termoDeBusca}"/>
+			            	
+			            <p:commandButton class="form-control btn btn-sm btn-amber" value="Buscar"
+			            	ajax="false" action="#{midiaController.buscarMidias()}"/>
 			        </h:form>
 					
 				</div>
