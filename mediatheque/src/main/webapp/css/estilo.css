@@ -1,0 +1,27 @@
+@font-face {
+	font-family: logo-font;
+	src: url(Chunkfive.otf);
+}
+
+@font-face {
+	font-family: corpo-font;
+	src: url(AUdimat-Regular.otf);
+}
+
+* {
+	font-family: corpo-font;
+}
+
+.logo {
+	font-family: logo-font;
+	font-size: 2em;
+	padding: 0.5em;
+}
+
+.footer {
+	font-size: 1em;
+}
+
+input, textarea, select {
+	font-family: inherit;
+}

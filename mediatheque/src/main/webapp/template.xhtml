@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" />
+		<link rel="stylesheet" href="css/estilo.css" />
+	</h:head>
+	<body>
+	
+		<header>
+				
+			<nav id="navbar" class="navbar navbar-expand-lg navbar-dark grey darken-3  justify-content-between">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<a href="#" class="navbar-brand logo">Médiathèque</a>
+		
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Login</a>
+						</li>
+					</ul>
+					
+					<h:form class="form-inline">
+			            <p:inputText class="form-control" placeholder="O que procura?"/>
+			            <p:commandButton class="form-control btn btn-sm btn-amber" value="Buscar"/>
+			        </h:form>
+					
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<ui:insert name="conteudo">
+				Conteúdo
+			</ui:insert>
+		</div>
+	
+		<footer class="page-footer center-on-small-only grey darken-3">
+		
+		    <div class="footer-copyright">
+		        <div class="container-fluid">
+		            ©2017 Médiathèque	
+		        </div>
+		    </div>
+		</footer>
+	
+	</body>
+</html>
