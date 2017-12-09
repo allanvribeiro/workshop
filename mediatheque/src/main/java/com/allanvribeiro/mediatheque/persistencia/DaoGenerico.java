@@ -6,7 +6,7 @@ import com.allanvribeiro.mediatheque.modelo.EntidadePersistencia;
 
 public abstract class DaoGenerico<T extends EntidadePersistencia> {
 
-	T buscar(Class<T> clazz, Long id) {
+	public T buscar(Class<T> clazz, Long id) {
 		EntityManager em = FabricaConexao.getEntityManager();
 		T resultado = null;
 		

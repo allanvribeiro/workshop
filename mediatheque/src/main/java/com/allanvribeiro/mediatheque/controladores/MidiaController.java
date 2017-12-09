@@ -16,7 +16,8 @@ public class MidiaController {
 	private String termoDeBusca;
 	private List<Midia> resultadoBusca;
 	
-	private MidiaDao midiaDao = new MidiaDao();
+	@Inject
+	private MidiaDao midiaDao;
 
 	public void buscarMidias() {
 		resultadoBusca = midiaDao.listar(termoDeBusca);

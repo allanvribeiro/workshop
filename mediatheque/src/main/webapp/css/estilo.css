@@ -25,3 +25,11 @@
 input, textarea, select {
 	font-family: inherit;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+	 padding-bottom: 70px;
+}
