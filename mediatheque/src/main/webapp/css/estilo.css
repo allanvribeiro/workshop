@@ -18,18 +18,31 @@
 	padding: 0.5em;
 }
 
-.footer {
-	font-size: 1em;
-}
-
 input, textarea, select {
 	font-family: inherit;
 }
 
 html, body {
-  height: 100%;
+	height: 100%;
+	margin: : 0pt;
 }
 
 body {
-	 padding-bottom: 70px;
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	display: table-row;
+	height: 1px;
+}
+
+footer {
+	display: table-row;
+	height: 1px;
+}
+
+#conteudo {
+	height: auto;
 }
