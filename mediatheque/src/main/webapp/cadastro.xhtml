@@ -9,38 +9,37 @@
 
 		<div class="row">
 			
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
-				<form>
-					<p class="h5 text-center mb-4">Crie aqui sua conta</p>
-
-					<div class="md-form">
-						<i class="fa fa-user prefix grey-text"></i>
-						 <p:inputText id="nomeCadastro" class="form-control"/>
-						 <label for="nomeCadastro">Nome</label>
-					</div>
-					<div class="md-form">
-						<i class="fa fa-envelope prefix grey-text"></i> 
-						<p:inputText id="emailCadastro" class="form-control"/>
-						<label for="emailCadastro">E-mail</label>
-					</div>
-
-					<div class="md-form">
-						<i class="fa fa-lock prefix grey-text"></i> 
-						<p:password id="senhaCadastro" class="form-control"/>
-						<label for="senhaCadastro">Senha</label>
-					</div>
-
-					<div class="text-center">
-						<p:commandButton class="form-control btn btn-amber" value="Cadastre-se"/>
-					</div>
+			<div class="col-md-4"/>
+			<div class="col-md-4">
+				<h:form class="mt-5 mb-5 form-signin">
 					
-<!-- 					<p:spacer height="20"/> -->
-					<p class="h5 text-center mb-4">Cadastre-se com sua conta Google.</p>
+					<p class="h5 text-center mb-4">Crie sua conta com Google</p>
 					<div class="h-100 d-flex justify-content-center">
 						<div class="g-signin2" data-onsuccess="onSignIn"></div>
 					</div>
-				</form>
+				
+					<p class="h5 text-center mb-4 mt-5">Crie sua conta com seu email</p>
+
+					<div class="form-label-group mb-4">					
+						<label for="nomeCadastro">Nome</label>
+						 <p:inputText id="nomeCadastro" class="form-control" placeholder="Nome"/>
+					</div>
+					
+					<div class="form-label-group mb-4">					
+						<label for="emailCadastro">Email</label>
+						<p:inputText id="emailCadastro" class="form-control" placeholder="E-mail"/>
+					</div>
+
+					<div class="form-label-group mb-4">					
+						<label for="senhaCadastro">Senha</label>
+						<p:password id="senhaCadastro" class="form-control" placeholder="Senha"/>
+					</div>
+
+					<div class="text-center">
+						<p:commandButton class="btn btn-block botao-primario" value="Criar conta"/>
+					</div>
+				
+				</h:form>
 			</div>
 		</div>
 		

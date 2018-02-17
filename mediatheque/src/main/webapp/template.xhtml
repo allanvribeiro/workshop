@@ -6,79 +6,74 @@
 	xmlns:p="http://primefaces.org/ui" lang="pt-BR">
 
 <h:head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" />
+	<title>Médiathèque</title>
+	<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" />
 	<link rel="stylesheet" href="css/estilo.css" />
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" />
-	<script	src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js" />
-	<script src="js/script.js"/>
-	
-	<meta name="google-signin-client_id" content="655528000593-2b5hivm6rae08jpuv4lav1lmjuqa2dhj.apps.googleusercontent.com" />
-	<script src="https://apis.google.com/js/platform.js"/>
+	<script src="js/script.js" />
+
+	<script src="https://apis.google.com/js/platform.js" />
+	<meta name="google-signin-client_id"
+		content="655528000593-2b5hivm6rae08jpuv4lav1lmjuqa2dhj.apps.googleusercontent.com" />
+
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,  shrink-to-fit=no" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 </h:head>
 <body>
 	<header>
-		<nav id="navbar"
-			class="navbar navbar-expand-lg navbar-dark grey darken-3">
+		<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
+				data-target="#navbarCollapse" aria-controls="navvarCollapse" aria-expanded="false"
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<a href="index.xhtml" class="navbar-brand logo">Médiathèque</a>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse" id="navBarCollapse">
 				<ul class="navbar-nav mr-auto">
 
 					<li id="home-nav" class="nav-item active">
-					<a class="nav-link" href="index.xhtml">Home <span class="sr-only">(current)</span></a></li>
-			
-					<li id="login-nav" class="nav-item">
-						<a class="nav-link" href="login.xhtml">
-							<h:outputText value="Login"/>
-						</a>
+						<a class="nav-link" href="index.xhtml">Home <span class="sr-only">(current)</span></a>
 					</li>
-					
+
+					<li id="login-nav" class="nav-item">
+						<a class="nav-link" href="login.xhtml"> <h:outputText value="Login" /></a>
+					</li>
+
 					<li id="cadastro-nav" class="nav-item">
-						<a class="nav-link" href="cadastro.xhtml">
-							<h:outputText value="Cadastro"/>
-						</a>
+					    <a class="nav-link" href="cadastro.xhtml"> <h:outputText value="Cadastro" /></a>
 					</li>
 				</ul>
+
+				<h:form class="form-inline mt-2 mt-md-0">
 				
-				<h:form class="form-inline" style="margin-top:15px;">
-					<p:inputText class="form-control" size="50"
-						placeholder="O que procura?" value="#{midiaController.termoDeBusca}" />
-		
-					<p:commandButton class="form-control btn btn-amber" value="Buscar"
+					<p:inputText id="buscaText" class="form-control mr-sm-2" size="50"
+						style="font-family: corpo-font;" placeholder="O que procura?"
+						value="#{midiaController.termoDeBusca}" />
+
+					<p:commandButton class="my-2 my-sm-0 botao-primario btn" value="Buscar"
 						ajax="false" action="#{midiaController.buscarMidias()}" />
 				</h:form>
-				
 			</div>
 		</nav>
 	</header>
 
-	<main id="conteudo">
-		<div  class="container">		
-				<p:spacer height="75" />
-		
-				<ui:insert name="conteudo">
-					Conteúdo
-				</ui:insert>
-			</div>
-	</main>
-	
-	<footer class="page-footer center-on-small-only grey darken-3">
 
-		<div class="footer-copyright">
-			<div class="container-fluid">©2017 Médiathèque</div>
+	<main role="main" class="container">
+		<p:spacer height="75" />
+
+		<ui:insert name="conteudo">
+					Conteúdo
+		</ui:insert>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<span class="text-muted">©2017 Médiathèque</span>
 		</div>
 	</footer>
 </body>
