@@ -12,33 +12,48 @@
 
 			<div class="col-md-6">
 				<h2 class="mt-5">Nova mídia</h2>
-				<h:form>
-					<div class="md-form">
-						<h:outputText value="Nome"/>
+				<h:form class="mt-3 mb-5 form-signin">
+				
+					<div class="form-label-group mb-4">
+						<label for="nomeMidia">Nome</label>
 						<p:inputText id="nomeMidia" class="form-control" />
+					</div>				
+					
+					<div class="form-label-group mb-4">
+						<label for="tipoMidia">Tipo de mídia</label>
+						<h:selectOneMenu id="tipoMidia" class="form-control" autoWidth="true">
+							<f:selectItem itemLabel="Selecione um tipo" itemValue="" noSelectionOption="true"/>
+             				<f:selectItem itemLabel="Álbum" />
+             				<f:selectItem itemLabel="Jogo" />
+             				<f:selectItem itemLabel="Livro" />             				
+						</h:selectOneMenu>
 					</div>
 					
-					<div class="md-form">
-						<h:outputText value="Data de lançamento"/>
-						<p:calendar id="dataLancamento" pattern="dd/MM/yyyy" mask="true" locale="pt"/>
+					<div class="form-label-group mb-4">
+						<label for="dataLancamento">Data de lançamento</label>
+						<p:calendar id="dataLancamento" pattern="dd/MM/yyyy" mask="true" locale="pt" 
+							class="bordas form-control" style="margin-left: -11px;"/>
 					</div>
 					
-					<div class="form">
-						<h:outputText value="Tipo de mídia"/>
-						<p:selectOneMenu id="tipoMidia">
-							<f:selectItem itemLabel="Selecione um tipo" itemValue="" />
-<!--             				<f:selectItems value="#{selectOneMenuView.cars}" /> -->
-						</p:selectOneMenu>
+					<div class="form-label-group  mb-4">
+						<label for="imagemUpload">Imagem da mídia</label>
+<!-- 						fileUploadListener="#{fileUploadView.handleFileUpload}" -->
+						<p:fileUpload id="imagemUpload" label="Enviar imagem" mode="advanced"
+						 	class="bordas form-control" auto="true" style="margin-left: -11px;"
+						 	sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" /> 
 					</div>
 					
-					<div class="text-center">
-						<p:commandButton class="form-control btn btn-amber" value="Salvar"/>						
+					<div class="form-label-group  mb-4">
+						<label for="descricao">Descrição</label>
+						<p:textEditor id="descricao" class="editor form-control"/>
+					</div>
+					
+					<div class="text-center mb-5">
+						<p:commandButton class="form-control botao-primario" value="Salvar"/>						
 					</div>
 					
 				</h:form>
 			</div>
-
-			<div class="col-md-3" />
 		</div>
 
 	</ui:define>
