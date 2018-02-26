@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
 
 import com.allanvribeiro.mediatheque.modelo.Midia;
 import com.allanvribeiro.mediatheque.modelo.TipoMidia;
@@ -23,6 +24,7 @@ public class MidiaController {
 	private List<Midia> resultadoBusca;
 	private Midia novaMidia;
 	private TipoMidia[] tiposMidia;
+	private UploadedFile imagemMidiaEnviada;
 	
 	@Inject
 	private MidiaServico midiaServico;
@@ -34,15 +36,15 @@ public class MidiaController {
 	}
 	
 	public void salvarMidia() {
+		
+		//TODO Definir imagem padrão
+		if(imagemMidiaEnviada != null) {
+			novaMidia.setImagem(imagemMidiaEnviada.getContents());
+		}
+		
 		midiaServico.salvarMidia(novaMidia);
 		novaMidia = new Midia();
 	}
-	
-	public void uploadImagemMidia(FileUploadEvent event) {
-		
-        //FacesMessage message = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
-        //FacesContext.getCurrentInstance().addMessage(null, message);
-    }
 
 	public void buscarMidias() {
 		resultadoBusca = midiaServico.buscarMidias(termoDeBusca);
@@ -81,4 +83,13 @@ public class MidiaController {
 	public void setTiposMidia(TipoMidia[] tiposMidia) {
 		this.tiposMidia = tiposMidia;
 	}
+
+	public UploadedFile getImagemMidiaEnviada() {
+		return imagemMidiaEnviada;
+	}
+
+	public void setImagemMidiaEnviada(UploadedFile imagemMidiaEnviada) {
+		this.imagemMidiaEnviada = imagemMidiaEnviada;
+	}
+	
 }

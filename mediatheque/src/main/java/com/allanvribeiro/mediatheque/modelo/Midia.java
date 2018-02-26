@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name="midia")
 public class Midia extends EntidadePersistencia {
@@ -34,6 +36,7 @@ public class Midia extends EntidadePersistencia {
 	
 	@Column
 	@Lob
+	@Type(type="org.hibernate.type.BinaryType")
 	private byte[] imagem;
 	
 	@Enumerated(EnumType.STRING)

@@ -19,7 +19,15 @@
 }
 
 input, textarea, select, button {
-	font-family: corpo-font ;
+	font-family: corpo-font;
+}
+
+.ui-inputfiel, .ui-inputtext {
+	font-family: corpo-font;
+}
+
+.ui-widget {
+	font-family: corpo-font;
 }
 
 html {
@@ -108,7 +116,7 @@ body {
 .navbar .navbar-nav .dropdown-menu .dropdown-item:hover,
 .navbar .navbar-nav .dropdown-menu .dropdown-item:focus,
 .navbar .navbar-nav .dropdown-menu .dropdown-item.active {
-  color: #cac0c0;
+  color: #504141;
   background-color: #ffa000;
 }
 .navbar .navbar-nav .dropdown-menu .dropdown-divider {
@@ -120,7 +128,7 @@ body {
 .navbar .navbar-nav .nav-item.show .nav-link,
 .navbar .navbar-nav .nav-item.show .nav-link:hover,
 .navbar .navbar-nav .nav-item.show .nav-link:focus {
-  color: #cac0c0;
+  color: #504141;
   background-color: #ffa000;
 }
 .navbar .navbar-toggle {
