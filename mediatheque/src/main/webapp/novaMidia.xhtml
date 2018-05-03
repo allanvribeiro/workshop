@@ -16,22 +16,21 @@
 				
 					<div class="form-label-group mb-4">
 						<label for="nomeMidia">Nome</label>
-						<p:inputText id="nomeMidia" class="form-control" />
+						<p:inputText id="nomeMidia" class="form-control" value="#{midiaController.novaMidia.nome}" />
 					</div>				
 					
 					<div class="form-label-group mb-4">
 						<label for="tipoMidia">Tipo de mídia</label>
-						<h:selectOneMenu id="tipoMidia" class="form-control" autoWidth="true">
+						<h:selectOneMenu id="tipoMidia" class="form-control" autoWidth="true" value="#{midiaController.novaMidia.tipo}">
 							<f:selectItem itemLabel="Selecione um tipo" itemValue="" noSelectionOption="true"/>
-             				<f:selectItem itemLabel="Álbum" />
-             				<f:selectItem itemLabel="Jogo" />
-             				<f:selectItem itemLabel="Livro" />             				
+             				<f:selectItems  var="tipo" value="#{midiaController.tiposMidia}" itemLabel="#{tipo.descricao}" itemValue="tipo" />             				
 						</h:selectOneMenu>
 					</div>
 					
 					<div class="form-label-group mb-4">
 						<label for="dataLancamento">Data de lançamento</label>
-						<p:calendar id="dataLancamento" pattern="dd/MM/yyyy" mask="true" locale="pt" 
+						<p:calendar id="dataLancamento" pattern="dd/MM/yyyy" mask="true" locale="pt"
+							value="#{midiaController.novaMidia.lancamento}" 
 							class="bordas form-control" style="margin-left: -11px;"/>
 					</div>
 					
